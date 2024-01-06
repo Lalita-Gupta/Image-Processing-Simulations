@@ -28,8 +28,8 @@ if main_choice == "Basics":
 
         conversion = st.selectbox("Pick one", ["Convert to Gray", "Convert to BGR", "Convert to Binary"])
 
-        img = cv2.imread("/Users/lg/Documents/VirtualLab_ImageProcessing/Image_Processing_Simulations/Image set/Basics/basics_image1.webp")
-        trial = cv2.imread("/Users/lg/Documents/VirtualLab_ImageProcessing/Image_Processing_Simulations/Image set/Basics/basics_image1.webp")
+        img = cv2.imread("Image set/Basics/basics_image1.webp")
+        trial = cv2.imread("Image set/Basics/basics_image1.webp")
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
         st.image(img, caption = "Original Image")
