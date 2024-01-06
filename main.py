@@ -61,7 +61,7 @@ if main_choice == "Basics":
             vertical = st.slider("Vertical Resizing", 1, 1000, value = 400)
 
         with col2:
-            img = cv2.imread("Experiment1/image.webp")
+            img = cv2.imread("Image set/Basics/basics_image1.webp")
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
             st.image(img, caption = "Original Image")
             st.write("Original Image dimensions:", img.shape)
@@ -81,7 +81,7 @@ if main_choice == "Basics":
             br = st.slider("Bottom Right Corner", 1, 800, value = 100)
 
         with col2:
-            img = cv2.imread("Experiment1/image.webp")
+            img = cv2.imread("Image set/Basics/basics_image1.webp")
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
             st.image(img, caption = "Original Image")
             st.write("Original Image dimensions:", img.shape)
@@ -118,10 +118,10 @@ if main_choice == "Blending or Pasting":
                 gamma_value = st.slider("Choose value of Gamma", 0, 100, value = 0)
 
             with col2:
-                large_img = cv2.imread("Experiment3/images/image1.jpeg")
+                large_img = cv2.imread("Image set/Blending or Pasting/image1.jpeg")
                 large_img = cv2.cvtColor(large_img, cv2.COLOR_BGR2RGB)
                 large_img = cv2.resize(large_img,(1024,1024))
-                small_img = cv2.imread("Experiment3/images/image2.png")
+                small_img = cv2.imread("Image set/Blending or Pasting/image2.png")
                 small_img = cv2.cvtColor(small_img, cv2.COLOR_BGR2RGB)
 
                 st.image(large_img, caption = "First Image")
@@ -144,10 +144,10 @@ if main_choice == "Blending or Pasting":
                 y_offset = st.slider("Choose y of Starting Point", 0, 799, value = 0)
 
             with col2:
-                large_img = cv2.imread("Image Processing Simulations/Image set/Blending or Pasting/image1.jpeg")
+                large_img = cv2.imread("Image set/Blending or Pasting/image1.jpeg")
                 large_img = cv2.cvtColor(large_img, cv2.COLOR_BGR2RGB)
                 large_img = cv2.resize(large_img,(1024,1024))
-                small_img = cv2.imread("Image Processing Simulations/Image set/Blending or Pasting/image2.png")
+                small_img = cv2.imread("Image set/Blending or Pasting/image2.png")
                 small_img = cv2.resize(small_img, (400,400))
                 small_img = cv2.cvtColor(small_img, cv2.COLOR_BGR2RGB)
 
@@ -195,10 +195,10 @@ if main_choice == "Blending or Pasting":
             y_offset = st.slider("Choose y of Starting Point", 0, 799, value = 0)
 
         with col2:
-            small_img = cv2.imread("Image Processing Simulations/Image set/Blending or Pasting/image1.jpeg")
+            small_img = cv2.imread("Image set/Blending or Pasting/image1.jpeg")
             small_img = cv2.resize(small_img, (300,300))
             small_img = cv2.cvtColor(small_img, cv2.COLOR_BGR2RGB)
-            large_img = cv2.imread("Image Processing Simulations/Image set/Blending or Pasting/image2.png")
+            large_img = cv2.imread("Image set/Blending or Pasting/image2.png")
             large_img = cv2.cvtColor(large_img, cv2.COLOR_BGR2RGB)
 
             st.image(small_img, caption = "First Image")
@@ -248,7 +248,7 @@ if main_choice == "Blurring or Smoothening":
 
             with col1_1:
 
-                img = cv2.imread("Image Processing Simulations/Image set/Blurring or Smoothening/image1.jpeg")
+                img = cv2.imread("Image set/Blurring or Smoothening/image1.jpeg")
                 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
                 st.image(img, caption = "Original Image")
@@ -260,7 +260,7 @@ if main_choice == "Blurring or Smoothening":
 
             with col1_2:
 
-                img = cv2.imread("Image Processing Simulations/Image set/Blurring or Smoothening/image1.jpeg")
+                img = cv2.imread("Image set/Blurring or Smoothening/image1.jpeg")
                 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
                 st.image(img, caption = "Original Image")
@@ -286,7 +286,7 @@ if main_choice == "Blurring or Smoothening":
 
             with col1_1:
 
-                img = cv2.imread("Image Processing Simulations/Image set/Blurring or Smoothening/image1.jpeg")
+                img = cv2.imread("Image set/Blurring or Smoothening/image1.jpeg")
                 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
                 st.image(img, caption = "Original Image")
@@ -298,7 +298,7 @@ if main_choice == "Blurring or Smoothening":
 
             with col1_2:
 
-                img = cv2.imread("Image Processing Simulations/Image set/Blurring or Smoothening/image1.jpeg")
+                img = cv2.imread("Image set/Blurring or Smoothening/image1.jpeg")
                 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
                 st.image(img, caption = "Original Image")
@@ -327,7 +327,7 @@ if main_choice == "Edge Detection":
             k_value = st.slider("Detection of curved edges", 0.0, 10.0, value = 0.05)
 
         with col2:
-            img = cv2.imread("Image Processing Simulations/Image set/Edge Detection/image.png")
+            img = cv2.imread("Image set/Edge Detection/image.png")
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
             st.image(img, caption = "Original Image")
@@ -375,13 +375,13 @@ if main_choice == "Feature Detection":
 
         with col2:
             if img_choice == "Image with clear distinction":
-                face_img = cv2.imread("Image Processing Simulations/Image set/Feature Detection/Nadia_Murad.jpg")
+                face_img = cv2.imread("Image set/Feature Detection/Nadia_Murad.jpg")
                 face_img = cv2.cvtColor(face_img, cv2.COLOR_BGR2RGB)
 
                 st.image(face_img, caption = "Original Image")
                 st.write("Original Image dimensions:", face_img.shape)
 
-                face_cascade = cv2.CascadeClassifier("Image Processing Simulations/Image set/Feature Detection/haarcascade_frontalface_default.xml")
+                face_cascade = cv2.CascadeClassifier("Image set/Feature Detection/haarcascade_frontalface_default.xml")
 
                 face_rects = face_cascade.detectMultiScale(face_img,scaleFactor=1.2,minNeighbors=5)
                 for (x,y,w,h) in face_rects:
@@ -390,13 +390,13 @@ if main_choice == "Feature Detection":
                 st.image(face_img, caption = "Result")
             
             if img_choice == "Image with unclear distinction":
-                face_img = cv2.imread("Image Processing Simulations/Image set/Feature Detection/Denis_Mukwege.jpg")
+                face_img = cv2.imread("Image set/Feature Detection/Denis_Mukwege.jpg")
                 face_img = cv2.cvtColor(face_img, cv2.COLOR_BGR2RGB)
 
                 st.image(face_img, caption = "Original Image")
                 st.write("Original Image dimensions:", face_img.shape)
 
-                face_cascade = cv2.CascadeClassifier("Image Processing Simulations/Image set/Feature Detection/haarcascade_frontalface_default.xml")
+                face_cascade = cv2.CascadeClassifier("Image set/Feature Detection/haarcascade_frontalface_default.xml")
 
                 face_rects = face_cascade.detectMultiScale(face_img,scaleFactor=1.2,minNeighbors=5)
                 for (x,y,w,h) in face_rects:
@@ -405,13 +405,13 @@ if main_choice == "Feature Detection":
                 st.image(face_img, caption = "Result")
 
             if img_choice == "Group Image":
-                face_img = cv2.imread("Image Processing Simulations/Image set/Feature Detection/solvay_conference.jpg")
+                face_img = cv2.imread("Image set/Feature Detection/solvay_conference.jpg")
                 face_img = cv2.cvtColor(face_img, cv2.COLOR_BGR2RGB)
 
                 st.image(face_img, caption = "Original Image")
                 st.write("Original Image dimensions:", face_img.shape)
 
-                face_cascade = cv2.CascadeClassifier("Image Processing Simulations/Image set/Feature Detection/haarcascade_frontalface_default.xml")
+                face_cascade = cv2.CascadeClassifier("Image set/Feature Detection/haarcascade_frontalface_default.xml")
 
                 face_rects = face_cascade.detectMultiScale(face_img)
                 for (x,y,w,h) in face_rects:
@@ -433,13 +433,13 @@ if main_choice == "Feature Detection":
 
         with col2:
             if img_choice == "Image with clear distinction":
-                face_img = cv2.imread("Image Processing Simulations/Image set/Feature Detection/Nadia_Murad.jpg")
+                face_img = cv2.imread("Image set/Feature Detection/Nadia_Murad.jpg")
                 face_img = cv2.cvtColor(face_img, cv2.COLOR_BGR2RGB)
 
                 st.image(face_img, caption = "Original Image")
                 st.write("Original Image dimensions:", face_img.shape)
 
-                face_cascade = cv2.CascadeClassifier("Image Processing Simulations/Image set/Feature Detection/haarcascade_eye.xml")
+                face_cascade = cv2.CascadeClassifier("Image set/Feature Detection/haarcascade_eye.xml")
 
                 face_rects = face_cascade.detectMultiScale(face_img,scaleFactor=1.2,minNeighbors=5)
                 for (x,y,w,h) in face_rects:
@@ -448,13 +448,13 @@ if main_choice == "Feature Detection":
                 st.image(face_img, caption = "Result")
             
             if img_choice == "Image with unclear distinction":
-                face_img = cv2.imread("Image Processing Simulations/Image set/Feature Detection/Denis_Mukwege.jpg")
+                face_img = cv2.imread("Image set/Feature Detection/Denis_Mukwege.jpg")
                 face_img = cv2.cvtColor(face_img, cv2.COLOR_BGR2RGB)
 
                 st.image(face_img, caption = "Original Image")
                 st.write("Original Image dimensions:", face_img.shape)
 
-                face_cascade = cv2.CascadeClassifier("Image Processing Simulations/Image set/Feature Detection/haarcascade_eye.xml")
+                face_cascade = cv2.CascadeClassifier("Image set/Feature Detection/haarcascade_eye.xml")
 
                 face_rects = face_cascade.detectMultiScale(face_img,scaleFactor=1.2,minNeighbors=5)
                 for (x,y,w,h) in face_rects:
@@ -473,13 +473,13 @@ if main_choice == "Feature Detection":
             color_shape = hex_to_rgb(color_shape)
 
         with col2:
-            face_img = cv2.imread("Image Processing Simulations/Image set/Feature Detection/car_plate.jpg")
+            face_img = cv2.imread("Image set/Feature Detection/car_plate.jpg")
             face_img = cv2.cvtColor(face_img, cv2.COLOR_BGR2RGB)
 
             st.image(face_img, caption = "Original Image")
             st.write("Original Image dimensions:", face_img.shape)
 
-            face_cascade = cv2.CascadeClassifier("Image Processing Simulations/Image set/Feature Detection/haarcascade_russian_plate_number.xml")
+            face_cascade = cv2.CascadeClassifier("Image set/Feature Detection/haarcascade_russian_plate_number.xml")
 
             face_rects = face_cascade.detectMultiScale(face_img,scaleFactor=1.2,minNeighbors=5)
             for (x,y,w,h) in face_rects:
@@ -497,7 +497,7 @@ if main_choice == "Watershed Algorithm":
     col1, col2 = st.columns([1, 3])
 
     with col2:
-        img = cv2.imread("Image Processing Simulations/Image set/Watershed Algorithm/image1.png")
+        img = cv2.imread("Image set/Watershed Algorithm/image1.png")
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
         st.image(img, caption = "Original Image")
@@ -529,13 +529,13 @@ if main_choice == "Feature Matching":
         template_choice = st.selectbox("Select Image for features", ["Select one", "Image1", "Image2"])
 
         if template_choice == "Image1":
-            reeses = cv2.imread("Image Processing Simulations/Image set/Feature Matching/lucky_charms.jpg")
+            reeses = cv2.imread("Image set/Feature Matching/lucky_charms.jpg")
             reeses = cv2.cvtColor(reeses, cv2.COLOR_BGR2RGB)
 
             st.image(reeses, caption = "Template Image")
             st.write("Template Image dimensions:", reeses.shape)
 
-            cereals = cv2.imread("Image Processing Simulations/Image set/Feature Matching/many_cereals.jpg")
+            cereals = cv2.imread("Image set/Feature Matching/many_cereals.jpg")
             cereals = cv2.cvtColor(cereals, cv2.COLOR_BGR2RGB)
 
             st.image(cereals, caption = "Main Image")
@@ -557,13 +557,13 @@ if main_choice == "Feature Matching":
             st.write("Result Image dimensions:", reeses_matches.shape)
 
         if template_choice == "Image2":
-            reeses = cv2.imread("Image Processing Simulations/Image set/Feature Matching/reeses_puffs.png")
+            reeses = cv2.imread("Image set/Feature Matching/reeses_puffs.png")
             reeses = cv2.cvtColor(reeses, cv2.COLOR_BGR2RGB)
 
             st.image(reeses, caption = "Template Image")
             st.write("Template Image dimensions:", reeses.shape)
 
-            cereals = cv2.imread("Image Processing Simulations/Image set/Feature Matching/many_cereals.jpg")
+            cereals = cv2.imread("Image set/Feature Matching/many_cereals.jpg")
             cereals = cv2.cvtColor(cereals, cv2.COLOR_BGR2RGB)
 
             st.image(cereals, caption = "Main Image")
@@ -591,13 +591,13 @@ if main_choice == "Feature Matching":
         template_choice = st.selectbox("Select Image for features", ["Select one", "Image1", "Image2"])
 
         if template_choice == "Image1":
-            reeses = cv2.imread("Image Processing Simulations/Image set/Feature Matching/lucky_charms.jpg")
+            reeses = cv2.imread("Image set/Feature Matching/lucky_charms.jpg")
             reeses = cv2.cvtColor(reeses, cv2.COLOR_BGR2RGB)
 
             st.image(reeses, caption = "Template Image")
             st.write("Template Image dimensions:", reeses.shape)
 
-            cereals = cv2.imread("Image Processing Simulations/Image set/Feature Matching/many_cereals.jpg")
+            cereals = cv2.imread("Image set/Feature Matching/many_cereals.jpg")
             cereals = cv2.cvtColor(cereals, cv2.COLOR_BGR2RGB)
 
             st.image(cereals, caption = "Main Image")
@@ -633,13 +633,13 @@ if main_choice == "Feature Matching":
             st.write("Result Image dimensions:", flann_matches.shape)
 
         if template_choice == "Image2":
-            reeses = cv2.imread("Image Processing Simulations/Image set/Feature Matching/reeses_puffs.png")
+            reeses = cv2.imread("Image set/Feature Matching/reeses_puffs.png")
             reeses = cv2.cvtColor(reeses, cv2.COLOR_BGR2RGB)
 
             st.image(reeses, caption = "Template Image")
             st.write("Template Image dimensions:", reeses.shape)
 
-            cereals = cv2.imread("Image Processing Simulations/Image set/Feature Matching/many_cereals.jpg")
+            cereals = cv2.imread("Image set/Feature Matching/many_cereals.jpg")
             cereals = cv2.cvtColor(cereals, cv2.COLOR_BGR2RGB)
 
             st.image(cereals, caption = "Main Image")
@@ -703,14 +703,14 @@ if main_choice == "Template Matching":
 
         with col2:
 
-            reeses = cv2.imread("Image Processing Simulations/Image set/Template Matching/reeses_puffs.png")
+            reeses = cv2.imread("Image set/Template Matching/reeses_puffs.png")
             reeses = cv2.cvtColor(reeses, cv2.COLOR_BGR2RGB)
             reeses = cv2.resize(reeses,(200,200))
 
             st.image(reeses, caption = "Original Image")
             st.write("Original Image dimensions:", reeses.shape)
 
-            cereals = cv2.imread("Image Processing Simulations/Image set/Template Matching/many_cereals.jpg")
+            cereals = cv2.imread("Image set/Template Matching/many_cereals.jpg")
             cereals = cv2.cvtColor(cereals, cv2.COLOR_BGR2RGB)
 
             st.image(cereals, caption = "Original Image")
@@ -761,14 +761,14 @@ if main_choice == "Template Matching":
 
         with col2:
 
-            reeses = cv2.imread("Image Processing Simulations/Image set/Template Matching/lucky_charms.jpg")
+            reeses = cv2.imread("Image set/Template Matching/lucky_charms.jpg")
             reeses = cv2.cvtColor(reeses, cv2.COLOR_BGR2RGB)
             reeses = cv2.resize(reeses,(200,200))
 
             st.image(reeses, caption = "Original Image")
             st.write("Original Image dimensions:", reeses.shape)
 
-            cereals = cv2.imread("Image Processing Simulations/Image set/Template Matching/many_cereals.jpg")
+            cereals = cv2.imread("Image set/Template Matching/many_cereals.jpg")
             cereals = cv2.cvtColor(cereals, cv2.COLOR_BGR2RGB)
 
             st.image(cereals, caption = "Original Image")
@@ -874,12 +874,12 @@ if main_choice == "Image Inprinting":
     col1, col2 = st.columns([1, 1])
     
     with col2:
-        img = cv2.imread("Image Processing Simulations/Image set/Image Inprinting/cat_damaged.png")
+        img = cv2.imread("Image set/Image Inprinting/cat_damaged.png")
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         st.image(img, caption = "Original Image")
         st.write("Original Image dimensions:", img.shape)
 
-        mask = cv2.imread("Image Processing Simulations/Image set/Image Inprinting/cat_mask.png",0)
+        mask = cv2.imread("Image set/Image Inprinting/cat_mask.png",0)
 
         st.image(mask, caption = "Mask Image")
         st.write("Mask Image dimensions:", mask.shape)
@@ -890,13 +890,13 @@ if main_choice == "Image Inprinting":
         st.write("Enhanced Image dimensions:", dst.shape)
 
     with col1:
-        img = cv2.imread("Image Processing Simulations/Image set/Image Inprinting/messi.jpeg")
+        img = cv2.imread("Image set/Image Inprinting/messi.jpeg")
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         img = cv2.resize(img,(400,400))
         st.image(img, caption = "Original Image")
         st.write("Original Image dimensions:", img.shape)
 
-        mask = cv2.imread("Image Processing Simulations/Image set/Image Inprinting/messi_mask.jpeg" ,0)
+        mask = cv2.imread("Image set/Image Inprinting/messi_mask.jpeg" ,0)
         mask = cv2.resize(mask,(400,400))
 
         st.image(mask, caption = "Mask Image")
