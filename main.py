@@ -224,6 +224,57 @@ if main_choice == "Blending or Pasting":
             st.image(large_img, caption = "Pasted Image")
             st.write("Pasted Image dimensions:", large_img.shape)
 
+    # # sidebar
+    # with st.sidebar:
+    #     main_choice = st.selectbox("Blending and Pasting of two images together", ["Objective", "Theory", "Pretest", "Simulation", "Feedback"])
+    
+    # # OBJECTIVE
+    # if main_choice == "Objective":
+    #     st.title("To blend and paste images with OpenCV.")
+    #     st.divider()
+    #     st.write("In this experiment, we're going to discuss how to blend and paste images on top of each other with OpenCV. This can be done through the add weighted function from OpenCV.")
+    
+    # # THEORY
+    # if main_choice == "Theory":
+    #     st.title("Blending and Pasting of Image")
+    #     st.header("Region of Interest")
+    #     st.write("We need to do is first define our Region of Interest. ")
+    #     st.write(" X offset and Y offset - These are going to stand as your markers of where you actually start the image and where you're actually going to overlay the image. That's the top left corner.")
+    #     st.write("Then we need to figure out where we're going to end X slice and Y slice. That will be our Region of Interest (ROI). X end is essentially your offset plus the length of X in the smaller image.")
+    #     st.latex(r'''End_X = Offset_X + Small Image Length_X ''')
+    #     st.write("Same goes for Y.")
+    #     st.latex(r''' End_Y = Offset_Y + Small Image Length_Y ''')
+    #     st.write("ROI is the region between Offset and End.")
+    
+    
+    #     st.header("Add Weighted Function")
+    #     st.write("It uses both images and combines some sort of weights attached to each image or each image pixel adds them together, and that results in your new pixel. ")
+    #     st.write("So the formula is essentially the following:")
+    #     st.latex(r''' new Pixel = alpha * image_1Pixel + beta * image_2Pixel + gamma''')
+    #     st.write(" New pixel in the new blended image = some value alpha of your choosing times the first pixel in the first image + some value beta that you also decide times the second pixel in the second image at the same location. And then if you want, you can optionally add in a gamma factor. ")
+    #     st.write("Gamma is the scalar added to each sum. It usually affects brightness of the resultant image.")
+    #     st.write("All you're doing here is you're doing a weighted sum. If you want pixel one from the first image to be more represented, you would just make a higher alpha value. If you want the image from pixel two or the second image to be less represented in the blended version, you would just lower your beta value. ")
+    #     st.write("So all you need to do is adjust alpha and beta to your choosing and you can have the image one show up stronger in the blended image or image to show up stronger. And if you want, you can also add in a gamma value to manipulate the image further for the blended image.")
+    
+    #     st.header("Blending Image of Different Size")
+    #     st.write("We actually only wanted to blend part of the image. We replace the values there or blending the values there and then adding those back in.")
+    #     st.write("We're going to create the mask. And we only let certain parts through of the smaller image onto the larger image through this mask. ")
+    
+    
+    #     st.header("Pasting")
+    #     st.write("The actual logic of taking a chunk of the larger image, pixel values and replacing them with the entirety of this smaller image. And it's actually pretty straightforward if you feel comfortable with numpy slicing.")
+    #     st.write("And then we're just replacing out those values. Notice here there is no blending. All we're doing is we're grabbing a chunk of the original large image and then replacing it with the smaller image. So that's how you can overlay images of different sizes, essentially just swapping out original information. ")
+    
+    # # PRETEST
+    # if main_choice == "Pretest":
+    #     pass
+    
+    # # FEEDBACK
+    # if main_choice == "Feedback":
+    #     st.write("Your opinion is valuable to us. Your feedback will help us make it better for you and other users.")
+    #     feedback=st.text_area("Give your Feedback")
+    #     st.caption("Thanks for your time")
+
 # SIMULATION 
 if main_choice == "Blurring or Smoothening":
 
@@ -260,7 +311,7 @@ if main_choice == "Blurring or Smoothening":
 
             with col1_2:
 
-                img = cv2.imread("Image set/Blurring or Smoothening/image1.jpeg")
+                img = cv2.imread("Image set/Blurring or Smoothening/image2.jpeg")
                 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
                 st.image(img, caption = "Original Image")
@@ -270,7 +321,7 @@ if main_choice == "Blurring or Smoothening":
                 st.image(dst, caption = "Smoothened Image")
                 st.write("Blurred Image dimensions:", dst.shape)
 
-        #for Smootheing
+        #for Smoothing
     if choice == "Smoothening of Image":
         #creating of columns
         col1, col2 = st.columns([1, 3])
@@ -298,7 +349,7 @@ if main_choice == "Blurring or Smoothening":
 
             with col1_2:
 
-                img = cv2.imread("Image set/Blurring or Smoothening/image1.jpeg")
+                img = cv2.imread("Image set/Blurring or Smoothening/image2.jpeg")
                 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
                 st.image(img, caption = "Original Image")
@@ -864,6 +915,7 @@ if main_choice == "Template Matching":
 
 
 # Image Inprinting
+# COMPUTATIONAL PHOTOGRAPHY
 if main_choice == "Image Inprinting":
 
     # title
